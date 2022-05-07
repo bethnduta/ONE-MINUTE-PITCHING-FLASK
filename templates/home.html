@@ -1,0 +1,57 @@
+{% extends 'minute.html'%}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+    <div class="pitch">
+        <h1 class="one">ONE-MINUTE-PITCHING</h1>
+        <p>An application that allows you to pitch your voice. Whether its a business planpitch, product promotion, presentation pitch and get it viewed by others</p>
+        <button class="btn btn-primary"class="get" type="button">GET PITCHED</button>
+    </div>
+    <br>
+    <br>
+    
+    <!-- <h2 class="sample">SAMPLE PITCHES</h2>
+    <div class="body">
+        <div class="row">
+            <h2>1-MIN-PITCH</h2>
+            <p>Introduce yourself, mention your title and team role</p>
+            <p>uploaded by: <span>BETH NDUTA</span></p>
+        </div>
+        <div class="row">
+            <h2>Business pitch</h2>
+            <p>Empowering small and medium business enterprises with the power of digital technologies</p>
+            <p>uploaded by: <span>KIARIE</span></p>
+        </div>
+        <div class="row">
+            <h2>Elevator Pitch</h2>
+            <p>we help our customers solve problems by providing better solutions for them</p>
+            <p>uploaded by: <span>NDUTS</span></p>
+        </div>
+    </div> -->
+    
+    <h2 class="sample">PITCHES FROM DIFFERENT USERS</h2>
+    <div class="body">
+        <div class="row">
+            <h2>CATEGORY:<span>Business pitches</span></h2>
+            <p>Introduce yourself, mention your title and team role</p>
+            <p>uploaded by: </p>
+            <div>
+                    <button type="button" class="btn btn-primary">COMMENT</button>
+                <button class="btn btn-success" type="button">UPVOTE</button>
+                <button class="btn btn-danger" type="button">DOWNVOTE</button>
+            </div>
+        </div>
+        <div class="row">
+            <h2>CATEGORY: <span>Elevator pitches</span></h2>
+            <p>Empowering small and medium business enterprises with the power of digital technologies</p>
+            <p>uploaded by: </p>
+            <div>
+                <button type="button" class="btn btn-primary">COMMENT</button>
+            <button class="btn btn-success" type="button">UPVOTE</button>
+            <button class="btn btn-danger" type="button">DOWNVOTE</button>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'minute.html'%}
+
+{% block body %}
+<h1>Pitches</h1>
+<ul class="list-group">
+    {% for pitch in pitches %}
+    <li class="list-group-item"><a href="{{pitch.id}}">{{pitch.title}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+
