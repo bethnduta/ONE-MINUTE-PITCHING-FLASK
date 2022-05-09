@@ -1,6 +1,24 @@
+from enum import unique
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 from data import Pitches
+
+
 app =Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pitch.db'
+db = SQLAlchemy(app)
+
+class Pitch(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    title = db.Column(db.String(length=25), nullable=False, unique=True)
+    body = db.Column(db.String(length=1000), nullable=False, unique=True)
+    author = db.Column(db.String(length=30), nullable=False, unique=True)
+
+    def __repr__(self):
+        return f'Pitch{self.title}'
+    
+
+
 
 Pitches=Pitches()
 
@@ -21,6 +39,7 @@ def signup():
 
 @app.route('/pitch')
 def pitch():
+    pitches = Pitch.query.all()
     return render_template('pitch.html', pitches=Pitches)
 
 @app.route('/pitches/<string:id>/')
