@@ -33,11 +33,11 @@ def pitches(id):
     return render_template('pitches.html', id=id)
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
-        user_to_create = User(username=form.username.data, email_address=form.email_address.data, password=form.password1.data)
+        user_to_create = User(username=form.username.data, email_address=form.email_address.data, password_hash=form.password1.data)
         db.session.add(user_to_create)
         db.session.commit()
         return redirect('/')
