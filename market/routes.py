@@ -1,9 +1,10 @@
 from market import app
-from flask import render_template
+from flask import render_template, redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from market.models import Pitch,User
 from market.data import Pitches
 from market.forms import RegisterForm
+from market import db
 
 Pitches=Pitches()
 
@@ -35,6 +36,11 @@ def pitches(id):
 @app.route('/register')
 def register_page():
     form = RegisterForm()
+    if form.validate_on_submit():
+        user_to_create = User(username=form.username.data, email_address=form.email_address.data, password=form.password1.data)
+        db.session.add(user_to_create)
+        db.session.commit()
+        return redirect('/')
     return render_template('register.html', form=form)    
     
 
