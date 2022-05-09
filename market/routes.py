@@ -1,7 +1,7 @@
 from market import app
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
-from market.models import Pitch
+from market.models import Pitch,User
 from market.data import Pitches
 from market.forms import RegisterForm
 

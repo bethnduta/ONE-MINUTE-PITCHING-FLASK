@@ -2,9 +2,30 @@
 
 {% block body %}
 <div class="container">
-    <form method="POST" class="form-register">
+    <form method="POST" class="form-register" style="text-align: center;">
+        <!-- <img src="https://imgs.search.brave.com/-qCRZOZwirdWWBkwL721JaUmQQAX8W7hCOVyUMp8Nhc/rs:fit:840:651:1/g:ce/aHR0cHM6Ly93d3cu/cG5nZmluZC5jb20v/cG5ncy9tLzYyMS02/MjE1MzQwX3JlZ2lz/dHJhdGlvbi1sb2dv/LXBuZy1yZWdpc3Rl/ci1ub3ctdHJhbnNw/YXJlbnQtcG5nLnBu/Zw" alt="" class="mb-4" style=" border-radius: 25px;
+        padding: 20px;
+        width: 200px;
+        height: 150px;">
+        <h1 class="h3 mb-3 font-weight-normal">
+            Create your account
+        </h1> -->
+        <br>
         {{ form.username.label() }}
         {{ form.username(class="form-control", placeholder="User Name")}}
+
+        {{ form.email_address.label() }}
+        {{ form.email_address(class="form-control", placeholder="Email Address")}}
+
+        {{ form.password1.label() }}
+        {{ form.password1(class="form-control", placeholder="password:")}}
+
+        {{ form.password2.label() }}
+        {{ form.password2(class="form-control", placeholder="Confirm password:")}}
+
+        <br>
+        {{ form.submit(class="btn btn-lg btn-block btn-success") }}
+
     </form>
 </div>
 {% endblock %}
