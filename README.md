@@ -1,6 +1,8 @@
 ## AUTHOR
 BETH NDUTA KIARIE
 
+![image](https://user-images.githubusercontent.com/85553801/167633262-7921897e-5ae7-4ba5-a2c4-b4b1b3175a85.png)
+
 ## PROJECT DESCRIPTION
 As a user, I would like to;
 - see the pitches other people have posted
