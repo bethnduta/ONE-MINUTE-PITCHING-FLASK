@@ -1,13 +1,13 @@
-var counter = 0;
+// var counter = 0;
 
-function upvote() {
-  counter++;
+// function upvote() {
+//   counter++;
 
-  document.getElementById('votes').innerHTML = counter;
-}
+//   document.getElementById('votes').innerHTML = counter;
+// }
 
-function downvote() {
-  counter--;
+// function downvote() {
+//   counter--;
 
-  document.getElementById('votes').innerHTML = counter;
-}
+//   document.getElementById('votes').innerHTML = counter;
+// }

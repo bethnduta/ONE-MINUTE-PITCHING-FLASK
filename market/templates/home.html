@@ -38,8 +38,8 @@
             <p>uploaded by: </p>
             <div>
                 <a href="/register" class="btn btn-lg btn-secondary">COMMENT</a>
-                <button class="btn btn-lg btn-success" type="button"><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="font-size: 1.3em">0</i>UPVOTE</button>
-                <button class="btn btn-lg btn-danger" type="button"><i onclick="myFunction(this)" class="fa fa-thumbs-down" style="font-size: 1.3em">0</i>DOWNVOTE</button>
+                <button class="btn btn-lg btn-success" type="button" onclick="upvote()"id="upvote"><i class="fa fa-thumbs-up" style="font-size: 1.3em" id="votes">0</i>UPVOTE</button>
+                <button class="btn btn-lg btn-danger" type="button" onclick="downvote()"id="downvote"><i  class="fa fa-thumbs-down" style="font-size: 1.3em" id="down">0</i>DOWNVOTE</button>
             </div>
         </div>
         <div class="grid-container">
@@ -48,9 +48,25 @@
             <p>uploaded by: </p>
             <div>
                 <a href="/register" class="btn btn-lg btn-secondary">COMMENT</a>
-                <p id="votes">0</p>
-                <button class="btn btn-lg btn-success" type="button" ><i onclick="upvote()"  id="upvote"class="fa fa-thumbs-up" style="font-size: 1.3em">0</i>UPVOTE</button>
-                <button class="btn btn-lg btn-danger" type="button"><i onclick="downvote()" class="fa fa-thumbs-down" style="font-size: 1.3em" id="downvote">0</i>DOWNVOTE</button>
+                <button class="btn btn-lg btn-success" type="button" onclick="upvote()"id="upvote"><i class="fa fa-thumbs-up" style="font-size: 1.3em" id="votes">0</i>UPVOTE</button>
+                <button class="btn btn-lg btn-danger" type="button" onclick="downvote()"id="downvote"><i  class="fa fa-thumbs-down" style="font-size: 1.3em" id="down">0</i>DOWNVOTE</button>
             </div>
                 
+
+    <script>
+        var counter = 0;
+        var number = 0;
+
+        function upvote() {
+        counter++;
+
+        document.getElementById('votes').innerHTML = counter;
+        }
+
+        function downvote() {
+        number--;
+
+        document.getElementById('down').innerHTML = number;
+        }
+    </script>
 {% endblock %}
