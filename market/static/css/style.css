@@ -14,7 +14,7 @@ body{
 .pitch{
     text-align: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .get{
@@ -23,7 +23,7 @@ body{
     color: white;
     font-size: 16px;
     margin: 10px;
-    border: 1px solid white;
+    border: 1px solid rgb(15, 14, 14);
     border-radius: 30px;
 }
 
