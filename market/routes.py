@@ -1,5 +1,5 @@
 from market import app
-from flask import render_template, redirect,url_for
+from flask import flash, render_template, redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from market.models import Pitch,User
 from market.data import Pitches
@@ -41,6 +41,9 @@ def register_page():
         db.session.add(user_to_create)
         db.session.commit()
         return redirect('/')
+    if form.errors != {}:
+            for err_msg in form.errors.values():
+                flash(f'There was an error when signing up: {err_msg}', category='danger')
     return render_template('register.html', form=form)    
     
 
