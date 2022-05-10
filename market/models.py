@@ -7,6 +7,8 @@ class User(db.Model):
     password_hash = db.Column(db.String(length=60), nullable=False)
     # Pitches = db.relationship('pitch', backref='owned_user', lazy=True)
 
+    
+
 
 class Pitch(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
