@@ -48,27 +48,9 @@
             <p>uploaded by: </p>
             <div>
                 <a href="/register" class="btn btn-lg btn-secondary">COMMENT</a>
-                <!-- <button class="btn btn-lg btn-success" type="button"><i onclick="myFunction(this)" class="fa fa-thumbs-up" style="font-size: 1.3em">0</i>UPVOTE</button>
-                <button class="btn btn-lg btn-danger" type="button"><i onclick="myFunction(this)" class="fa fa-thumbs-down" style="font-size: 1.3em">0</i>DOWNVOTE</button> -->
-                <div class="vote roundrect">
-                    <div class="increment up"></div>
-                    <div class="increment down"></div>
-                  
-                    <div class="count">4</div>
-                  </div>
-                  
-                  <div class="vote chev">
-                    <div class="increment up"></div>
-                    <div class="increment down"></div>
-                  
-                    <div class="count">0</div>
-                  </div>
-                  
-                  <div class="vote circle">
-                    <div class="increment up"></div>
-                    <div class="increment down"></div>
-                  
-                    <div class="count">8</div>
-                  </div>
+                <p id="votes">0</p>
+                <button class="btn btn-lg btn-success" type="button" ><i onclick="upvote()"  id="upvote"class="fa fa-thumbs-up" style="font-size: 1.3em">0</i>UPVOTE</button>
+                <button class="btn btn-lg btn-danger" type="button"><i onclick="downvote()" class="fa fa-thumbs-down" style="font-size: 1.3em" id="downvote">0</i>DOWNVOTE</button>
+            </div>
                 
 {% endblock %}

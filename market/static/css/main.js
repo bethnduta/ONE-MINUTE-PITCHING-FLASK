@@ -1,24 +1,13 @@
-// function myFunction(x) {
-//     x.classList.toggle("fa-thumbs-down");
-//   }
+var counter = 0;
 
-$(function () {
-  $(".increment").click(function () {
-    var count = parseInt($("~ .count", this).text());
+function upvote() {
+  counter++;
 
-    if ($(this).hasClass("up")) {
-      var count = count + 1;
+  document.getElementById('votes').innerHTML = counter;
+}
 
-      $("~ .count", this).text(count);
-    } else {
-      var count = count - 1;
-      $("~ .count", this).text(count);
-    }
+function downvote() {
+  counter--;
 
-    $(this).parent().addClass("bump");
-
-    setTimeout(function () {
-      $(this).parent().removeClass("bump");
-    }, 400);
-  });
-});
+  document.getElementById('votes').innerHTML = counter;
+}
