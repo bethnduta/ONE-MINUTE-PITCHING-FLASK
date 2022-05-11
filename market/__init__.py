@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from market.data import Pitches
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
+from market.models import User
+
 
 
 app =Flask(__name__)
